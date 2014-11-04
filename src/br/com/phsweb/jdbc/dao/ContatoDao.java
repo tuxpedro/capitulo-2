@@ -21,7 +21,7 @@ public class ContatoDao {
 
 	public void adicionaContato(Contato contato) {
 		String sql = "INSERT INTO contatos"
-				+ "(nome, email, endereco, datanascimento) values(?,?,?,?)";
+				+ "(nome, email, endereco, datanascimento) WHERE LIKE 'P%' AND LIKE 'R%' values(?,?,?,?)";
 
 		try {
 			java.sql.PreparedStatement stmt = connection.prepareStatement(sql);
